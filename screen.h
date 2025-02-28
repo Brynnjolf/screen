@@ -8,6 +8,8 @@
 #include <sys/ioctl.h>
 #include <unistd.h>
 
+#define GET_SCREEN_BUFFER(screen, name, width) char (*name)[width] = (char (*)[width])screen.buffer // sick
+
 typedef struct Screen {
   int width;
   int height;
